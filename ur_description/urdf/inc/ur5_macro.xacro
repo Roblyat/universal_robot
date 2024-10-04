@@ -20,13 +20,15 @@
           model will be used, which will almost certainly not correspond to any
           real robot.
   -->
+  
+  <!-- 240921 roblyat change: transmission_hw_interface dynamic param & moved to second place -->
   <xacro:macro name="ur5_robot" params="
    prefix
+   transmission_hw_interface
    joint_limits_parameters_file:='$(find ur_description)/config/ur5/joint_limits.yaml'
    kinematics_parameters_file:='$(find ur_description)/config/ur5/default_kinematics.yaml'
    physical_parameters_file:='$(find ur_description)/config/ur5/physical_parameters.yaml'
    visual_parameters_file:='$(find ur_description)/config/ur5/visual_parameters.yaml'
-   transmission_hw_interface:=hardware_interface/PositionJointInterface
    safety_limits:=false
    safety_pos_margin:=0.15
    safety_k_position:=20"
